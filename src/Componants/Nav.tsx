@@ -9,17 +9,14 @@ const Nav = () => {
         <nav className="sticky top-0 z-50 border-b border-gray-200 bg-white">
             <div className="mx-auto max-w-6xl px-5">
 
-                {/* Desktop / Mobile Header */}
                 <div className="flex h-20 items-center justify-between">
 
-                    {/* Logo */}
                     <img
                         src={logo}
                         alt="DevStack"
                         className="h-9 w-auto"
                     />
 
-                    {/* Desktop Menu */}
                     <div className="hidden items-center gap-8 lg:flex">
 
                         <ul className="flex items-center gap-8 text-[16px] text-slate-600">
@@ -69,7 +66,6 @@ const Nav = () => {
 
                     </div>
 
-                    {/* Mobile Hamburger */}
                     <button
                         onClick={() => setMenuOpen(!menuOpen)}
                         className="lg:hidden"
@@ -83,7 +79,6 @@ const Nav = () => {
 
                 </div>
 
-                {/* Mobile Menu */}
                 {menuOpen && (
                     <div className="border-t border-gray-100 pb-6 pt-5 lg:hidden">
 
@@ -101,7 +96,7 @@ const Nav = () => {
 
                             <li>
                                 <a
-                                    href="#technologies"
+                                    href="#"
                                     onClick={() => setMenuOpen(false)}
                                 >
                                     Technologies
@@ -110,7 +105,7 @@ const Nav = () => {
 
                             <li>
                                 <a
-                                    href="#projects"
+                                    href="#"
                                     onClick={() => setMenuOpen(false)}
                                 >
                                     Projects
@@ -119,7 +114,7 @@ const Nav = () => {
 
                             <li>
                                 <a
-                                    href="#about"
+                                    href="#"
                                     onClick={() => setMenuOpen(false)}
                                 >
                                     About
@@ -128,7 +123,7 @@ const Nav = () => {
 
                             <li>
                                 <a
-                                    href="#contact"
+                                    href="#"
                                     onClick={() => setMenuOpen(false)}
                                 >
                                     Contact

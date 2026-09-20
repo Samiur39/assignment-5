@@ -18,7 +18,6 @@ interface Props {
 
 const YourStack = ({ selectedTech, setSelectedTech }: Props) => {
 
-    // Function to remove a single technology from the stack
     const handleRemove = (techToRemove: ITechnology) => {
         setSelectedTech((prev) =>
             prev.filter((tech) => tech.id !== techToRemove.id)
@@ -27,7 +26,6 @@ const YourStack = ({ selectedTech, setSelectedTech }: Props) => {
         toast.info(`${techToRemove.name} removed from your stack`);
     };
 
-    // Function to delete all technologies
     const handleDeleteAll = () => {
         setSelectedTech([]);
         toast.info("All technologies removed from your stack");
@@ -36,7 +34,6 @@ const YourStack = ({ selectedTech, setSelectedTech }: Props) => {
     return (
         <div className="h-fit rounded-2xl border border-slate-200 bg-white p-5 shadow-sm lg:sticky lg:top-8">
 
-            {/* Header Section */}
             <div>
                 <h3 className="text-xl font-bold text-[#0F172A]">
                     Your Stack
@@ -51,12 +48,10 @@ const YourStack = ({ selectedTech, setSelectedTech }: Props) => {
                 </p>
             </div>
 
-            {/* Selected Items */}
             <div className="mt-5 flex flex-col gap-2">
 
                 {selectedTech.length === 0 ? (
 
-                    /* Empty Stack */
                     <div className="flex h-20 items-center justify-center rounded-xl border border-dashed border-slate-300">
                         <p className="text-sm text-slate-400">
                             Your stack is empty.
@@ -71,7 +66,6 @@ const YourStack = ({ selectedTech, setSelectedTech }: Props) => {
                             className="flex items-center justify-between rounded-lg border border-slate-200 bg-white px-3 py-2"
                         >
 
-                            {/* Icon & Details */}
                             <div className="flex min-w-0 items-center gap-3">
 
                                 <img
@@ -92,7 +86,6 @@ const YourStack = ({ selectedTech, setSelectedTech }: Props) => {
 
                             </div>
 
-                            {/* Remove Button */}
                             <button
                                 onClick={() => handleRemove(tech)}
                                 className="ml-2 cursor-pointer rounded p-1 text-slate-400 transition-colors hover:bg-slate-50 hover:text-red-500"
@@ -120,7 +113,6 @@ const YourStack = ({ selectedTech, setSelectedTech }: Props) => {
 
             </div>
 
-            {/* Remove All Button */}
             {selectedTech.length > 0 && (
                 <button
                     onClick={handleDeleteAll}

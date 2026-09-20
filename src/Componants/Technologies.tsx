@@ -26,7 +26,7 @@ const Technologies = ({ technoDataPromise }: Props) => {
             id="technologies"
             className="mx-auto max-w-6xl px-5 py-12 sm:py-16"
         >
-            {/* Heading */}
+
             <div>
                 <h2 className="text-3xl font-bold text-[#0F172A] sm:text-4xl lg:text-5xl">
                     Explore the{" "}
@@ -40,9 +40,8 @@ const Technologies = ({ technoDataPromise }: Props) => {
                 </p>
             </div>
 
-            {/* Cards + Stack */}
             <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-4">
-                {/* Technology Cards */}
+
                 <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:col-span-3 lg:grid-cols-3">
                     {techno.map((technology) => (
                         <TechnologiesCard
@@ -53,8 +52,6 @@ const Technologies = ({ technoDataPromise }: Props) => {
                         />
                     ))}
                 </div>
-
-                {/* Your Stack */}
                 <YourStack
                     selectedTech={selectedTech}
                     setSelectedTech={setSelectedTech}

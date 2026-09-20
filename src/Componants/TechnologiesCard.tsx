@@ -23,19 +23,16 @@ const TechnologiesCard = ({
     setSelectedTech,
 }: Props) => {
     
-    // Checks if THIS specific technology (by ID) is already in the stack
     const isSelected = selectedTech.some(
         (tech) => tech.id === technology.id
     );
 
     const handleAddToStack = () => {
-        // If it's already selected, show an error and return
         if (isSelected) {
             toast.error(`${technology.name} is already in your stack!`);
             return;
         }
 
-        // Add the technology to the stack
         setSelectedTech((prev) => [
             ...prev,
             technology,
@@ -48,7 +45,6 @@ const TechnologiesCard = ({
 
     return (
         <div className="flex flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-md">
-            {/* Icon + Badge */}
             <div className="flex items-start justify-between gap-3">
                 <img
                     src={technology.icon}
@@ -60,20 +56,17 @@ const TechnologiesCard = ({
                 </span>
             </div>
 
-            {/* Name */}
             <h3 className="mt-5 text-xl font-semibold text-[#0F172A]">
                 {technology.name}
             </h3>
 
-            {/* Description */}
+
             <p className="mt-3 min-h-18 text-sm leading-6 text-slate-500">
                 {technology.description}
             </p>
 
-            {/* Divider */}
             <div className="my-4 border-t border-slate-100" />
 
-            {/* Information */}
             <div className="flex items-center justify-between gap-2 text-xs sm:text-sm">
                 <span className="rounded bg-slate-100 px-2 py-1 text-slate-600">
                     {technology.category}
@@ -89,7 +82,6 @@ const TechnologiesCard = ({
                 </span>
             </div>
 
-            {/* Add Button */}
             <button
                 onClick={handleAddToStack}
                 disabled={isSelected}

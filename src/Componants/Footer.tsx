@@ -4,10 +4,8 @@ const Footer = () => {
 
             <div className="mx-auto max-w-6xl px-5">
 
-                {/* Main */}
                 <div className="grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4 lg:py-20">
 
-                    {/* Brand */}
                     <div>
                         <div className="flex items-center gap-3">
 
@@ -35,7 +33,6 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Product */}
                     <div>
                         <h3 className="text-sm font-semibold uppercase text-[#172033]">
                             Product
@@ -48,7 +45,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Company */}
+
                     <div>
                         <h3 className="text-sm font-semibold uppercase text-[#172033]">
                             Company
@@ -61,7 +58,6 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Legal */}
                     <div>
                         <h3 className="text-sm font-semibold uppercase text-[#172033]">
                             Legal
@@ -75,10 +71,8 @@ const Footer = () => {
 
                 </div>
 
-                {/* Divider */}
                 <div className="border-t border-slate-100" />
 
-                {/* Bottom */}
                 <div className="flex flex-col gap-4 py-7 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between">
 
                     <p>

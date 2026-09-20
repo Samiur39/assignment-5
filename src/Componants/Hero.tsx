@@ -6,7 +6,6 @@ const Hero = () => {
 
             <div className="flex flex-col items-center justify-between gap-10 py-12 sm:py-16 lg:flex-row lg:py-20">
 
-                {/* Left */}
                 <div className="w-full lg:w-1/2">
 
                     <h1 className="text-4xl font-bold leading-tight text-[#0F172A] sm:text-5xl lg:text-6xl">
@@ -36,7 +35,6 @@ const Hero = () => {
 
                 </div>
 
-                {/* Right */}
                 <div className="flex w-full justify-center lg:w-1/2 lg:justify-end">
 
                     <img
